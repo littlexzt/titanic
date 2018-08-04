@@ -90,7 +90,7 @@ X_test = test_df.drop("PassengerId", axis=1).copy()
 decision_tree = DecisionTreeClassifier()
 decision_tree.fit(X_train, Y_train)
 Y_pred = decision_tree.predict(X_test)
-acc_decision_tree = round(decision_tree.score(X_train, Y_train)*100, 2)
+acc_decision_tree = round(decision_tree.score(X_train, Y_train)*100, 10)
 print("accuracy for decision_tree:%f" % acc_decision_tree)
 
 submission = pd.DataFrame({
